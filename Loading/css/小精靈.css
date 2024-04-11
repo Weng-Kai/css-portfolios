@@ -1,0 +1,197 @@
+* {
+    box-sizing: border-box;
+}
+
+body{
+    margin:0;
+    width: 100%;
+    height: 100vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Times New Roman';
+}
+
+.container{
+    width: 1500px;
+    height: 300px;
+    padding: 30px 0 ;
+    /* background-color: green; */
+    position: relative;
+}
+
+.face-all{
+    position:relative;
+    /* background-color: yellow; */
+    width: 200px;
+    height: 200px;
+    animation-name: face_all;
+    animation-duration:6s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes face_all {
+    0% {
+        left: 0;
+    }
+    100% {
+        left: calc(100% - 200px)
+    }
+}
+
+.face-all::before{
+    content:"";
+    background-color: black;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    z-index: 1;
+}
+
+.face{
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    border-radius: 100px 100px 0 0;
+    transform-origin: bottom;
+    animation-duration: .5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+}
+
+.face-1{
+    background-color: red;
+    transform: rotate(-45deg);
+    animation-name: face_1;
+}
+
+.face-2 {
+    background-color: red;
+    transform: rotate(225deg);
+    animation-name: face_2;
+}
+
+@keyframes face_1 {
+    0%, 100% {
+        transform: rotate(-45deg);
+    }
+    50% {
+            transform: rotate(0deg);
+    }
+}
+
+@keyframes face_2 {
+    0%, 100% {
+        transform: rotate(225deg);
+    }
+    50% {
+        transform: rotate(180deg);
+        }
+}
+
+.ball-all{
+    position:absolute;
+    top:45%;
+    left:180px;
+    display:flex;
+}
+
+.ball{
+    height: 20px;
+    width: 20px;
+    margin-right: 200px;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    background-color: lawngreen;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-duration: .3s;
+}
+
+.ball-1{
+    animation-name: ball_1;
+             
+}
+
+@keyframes ball_1{
+    100%{
+        opacity: 0;
+    }
+}
+
+.ball-2{
+    animation-name: ball_2;
+    animation-delay: 1s;
+}
+
+@keyframes ball_2 {
+    100% {
+        opacity: 0;
+    }
+}
+
+.ball-3{
+    animation-name: ball_3;
+    animation-delay: 2s;
+}
+
+@keyframes ball_3 {
+    100% {
+        opacity: 0;
+        }
+}
+
+.ball-4{
+    animation-name: ball_4;
+    animation-delay: 3s;
+}
+
+@keyframes ball_4 {
+    100% {
+        opacity: 0;
+        }
+}
+
+.ball-5{
+    animation-name: ball_5;
+    animation-delay: 4s;
+}
+
+@keyframes ball_5 {
+    100% {
+    opacity: 0;
+        }
+}
+
+.ball-6{
+    animation-name: ball_6;
+    animation-delay: 5s;
+}
+
+@keyframes ball_6 {
+    100% {
+        opacity: 0;
+        }
+}
+
+.button{       
+    display:block;
+    width: 150px;
+    height: 50px;
+    border-radius: 50px;
+    background-color: black;
+    text-align: center;
+    line-height:  50px;
+    color: whitesmoke; 
+    font-size: 30px;
+    font-weight:bolder;
+    text-decoration: none;
+}
