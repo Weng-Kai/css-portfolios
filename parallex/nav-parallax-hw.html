@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nav-parallax-hw</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0 10%;
+            background-color: antiquewhite;
+        }
+
+        .nav{
+            width: calc(80% - 10px * 2);
+            height: calc(100px - 10px * 2);
+            position: fixed;
+            z-index: 9;
+            padding: 10px;
+        }
+
+        .logo{
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-image: url(./img/DOGE.avif);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: 10%;
+            float:left;
+        }
+
+        .logo:hover{
+            cursor: pointer;
+            transform: scale(1.2);
+            transform: rotate(180deg);
+            transform: scale(1.2) rotate(180deg);
+        }
+
+        .nav-btn-all{
+            float: right;
+        }
+
+        .nav-btn{
+            background-color: pink;
+            width: 80px;
+            height: 50px;
+            float: left;
+            margin-left: 10px;
+            margin-top: 15px;
+            border-radius: 10px;
+            text-align: center;
+            line-height: 50px;
+            font-size: 24px;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: 400;
+            text-decoration: none;
+        }
+
+        .nav-btn-1:link{
+            color:red ;
+        }
+        .nav-btn-2:link{
+            color:blue;
+        }
+        .nav-btn-3:link{
+            color:green ;
+        }
+        .nav-btn-1:visited{
+            color:green ;
+        }
+        .nav-btn-2:visited{
+            color:red ;
+        }
+        .nav-btn-3:visited{
+            color:blue ;
+        }
+        .nav-btn-1:hover{
+            background-color:aquamarine ;
+        }
+        .nav-btn-2:hover{
+            background-color:purple ;
+        }
+        .nav-btn-3:hover{
+            background-color:brown ;
+        }
+        .nav-btn-1:active{
+            background-color:brown ;
+        }
+        .nav-btn-2:active{
+            background-color:aquamarine ;
+        }
+        .nav-btn-3:active{
+            background-color:purple ;
+        }
+
+        .all{
+            /* background-color: yellow; */
+            width: 100%;
+            height: 100vh;
+            margin: auto;
+        }
+
+        .banner{
+            background-color: red;
+            width: 100%;
+            height: 50vh;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            padding-top:50vh ;
+            position: relative;
+        }
+
+        #banner-1{
+            background-image: url(./img/A.jpg);
+        }
+
+        #banner-2{
+            background-image: url(./img/B.jpg);
+        }
+
+        #banner-3{
+            background-image: url(./img/C.jpg);
+        }
+
+        .mask{
+            width: 100%;
+            height: 50vh;
+            background-color: black;
+            opacity: 30%;
+        }
+
+        .btn{
+            background-color: white;
+            width: 150px;
+            height: 60px;
+            border-radius: 10px;
+            position: absolute;
+            left: 50%;
+            top: 75%;
+            transform: translate(-50%,-50%);
+            font-size: 48px;
+            color: black;
+            font-weight: 400;
+            font-family: 'Times New Roman', Times, serif;
+            line-height: 60px;
+            text-align: center;
+        }
+
+        .btn-1:hover{
+            background-color: lightskyblue;
+            color:bisque;
+            border-radius:45%
+        }
+
+        .btn-2:hover{
+            background-color: aquamarine;
+            color:white;
+            border-radius:45%
+        }
+
+        .btn-3:hover{
+            background-color: lightcoral;
+            color:lightseagreen;
+            border-radius:45%
+        }
+
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <div class="logo"></div>
+        <div class="nav-btn-all">
+            <a href="#banner-1" class="nav-btn nav-btn-1">A</a>
+            <a href="#banner-2" class="nav-btn nav-btn-2">B</a>
+            <a href="#banner-3" class="nav-btn nav-btn-3">C</a>
+        </div>
+    </div>
+    <div class="all">
+        <div id="banner-1" class="banner">
+            <div class="mask"></div>
+            <div class="btn btn-1">A</div>
+        </div>
+        <div id="banner-2" class="banner">
+            <div class="mask"></div>
+            <div class="btn btn-2">B</div>
+        </div>
+        <div id="banner-3" class="banner">
+            <div class="mask"></div>
+            <div class="btn btn-3">C</div>
+        </div>
+    </div>
+</body>
+</html>
